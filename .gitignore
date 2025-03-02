@@ -1,4 +1,5 @@
 .venv
 /superuser
 .db.sqlite3
+__pycache__
 

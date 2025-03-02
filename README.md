@@ -17,7 +17,7 @@ Este es un backend desarrollado en Django para gestionar el registro de vehícul
 ### 🚀 Configuración del entorno
 1. Clonar el repositorio:
    ```sh
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone https://github.com/alejandroponce00/parking_backend
    cd tu_repositorio
    ```
 2. Crear y activar un entorno virtual:
