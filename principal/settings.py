@@ -15,6 +15,7 @@ import dj_database_url
 from dotenv import load_dotenv
 import os
 load_dotenv()
+print("DATABASE_URL:", os.environ.get('DATABASE_URL'))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,7 +134,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOW_ALL_ORIGINS = True
+CCORS_ALLOWED_ORIGINS = [
+ 'https://parking-frontend-theta.vercel.app/', 
+    
+]
+
 CSRF_TRUSTED_ORIGINS = [
     "https://web-production-eb62.up.railway.app",  # Reemplaza con el dominio de tu app
 ]
