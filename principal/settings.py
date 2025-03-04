@@ -135,10 +135,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CCORS_ALLOWED_ORIGINS = [
- 'https://parking-frontend-theta.vercel.app/', 'http://localhost:3000/'
+ 'https://parking-frontend-theta.vercel.app', 'http://localhost:3000/'
     
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://web-production-eb62.up.railway.app",  # Reemplaza con el dominio de tu app
+    "https://web-production-eb62.up.railway.app",
+      'https://parking-frontend-theta.vercel.app'  # Reemplaza con el dominio de tu app
 ]
