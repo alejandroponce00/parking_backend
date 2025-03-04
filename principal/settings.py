@@ -135,7 +135,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CCORS_ALLOWED_ORIGINS = [
- 'https://parking-frontend-theta.vercel.app/', 
+ 'https://parking-frontend-theta.vercel.app/', 'http://localhost:3000/'
     
 ]
 
