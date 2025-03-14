@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from decimal import Decimal
 from math import ceil
+from rest_framework.exceptions import ValidationError
 
 class Estacionamiento(models.Model):
     vehiculo = models.CharField(max_length=50)
@@ -11,6 +12,10 @@ class Estacionamiento(models.Model):
     tarifa = models.DecimalField(max_digits=10, decimal_places=2, default=0.00, help_text="Precio en dólares")
     cupon_gratis = models.BooleanField(default=False)
     tarifa_por_hora = models.DecimalField(max_digits=5, decimal_places=2, default=2.00, help_text="Tarifa base por hora en dólares")
+    pagado = models.BooleanField(default=False)
+    fecha_pago = models.DateTimeField(null=True, blank=True)
+    pagado = models.BooleanField(default=False)
+    fecha_pago = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.vehiculo} - {self.patente}"
@@ -20,8 +25,8 @@ class Estacionamiento(models.Model):
         if self.cupon_gratis:
             return Decimal('0.00')
             
-        tiempo_actual = timezone.now()
-        tiempo_transcurrido = tiempo_actual - self.fecha
+        tiempo_final = self.fecha_pago if self.pagado else timezone.now()
+        tiempo_transcurrido = tiempo_final - self.fecha
         
         # Convertir a horas y redondear hacia arriba
         horas = ceil(tiempo_transcurrido.total_seconds() / 3600)
