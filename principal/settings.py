@@ -143,6 +143,6 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "web-production-ef85a.up.railway.app",
+    'https://web-production-ef85a.up.railway.app/',
       'https://parking-frontend-theta.vercel.app'  # Reemplaza con el dominio de tu app
 ]
