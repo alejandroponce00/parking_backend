@@ -132,13 +132,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
-    "https://parking-frontend-theta.vercel.app",
+ 'https://parking-frontend-theta.vercel.app',
+ 'http://localhost:3000',
+    
 ]
 
-# Si usás cookies/sesión entre frontend y backend:
-CORS_ALLOW_CREDENTIALS = True
-
 CSRF_TRUSTED_ORIGINS = [
-    "https://parking-frontend-theta.vercel.app",
-    "https://web-production-ef85a.up.railway.app",
+    'https://web-production-ef85a.up.railway.app',
+      'https://parking-frontend-theta.vercel.app'  # Reemplaza con el dominio de tu app
 ]
