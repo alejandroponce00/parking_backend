@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     'web-production-ef85a.up.railway.app',
+    'https://parking-frontend-theta.vercel.app/',
 ]
 
 
@@ -132,12 +133,13 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
- 'https://parking-frontend-theta.vercel.app',
+ "https://parking-frontend-theta.vercel.app",
  'http://localhost:3000',
     
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-ef85a.up.railway.app',
-      'https://parking-frontend-theta.vercel.app'  # Reemplaza con el dominio de tu app
+      'https://parking-frontend-theta.vercel.app',"http://localhost:8000",
+    "http://127.0.0.1:8000",  # Reemplaza con el dominio de tu app
 ]
