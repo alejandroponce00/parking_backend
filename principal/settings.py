@@ -89,12 +89,11 @@ WSGI_APPLICATION = 'principal.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
-        engine='django.db.backends.postgresql',
         conn_max_age=600,
-        conn_health_checks=True,
+        conn_health_checks=True
     )
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
